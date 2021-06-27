@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.22476" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/54be8d1c700cc4d5368b4567.css?themeRevisionID=5cf3a162dd9c567eaf536421"/>
+
+<style type="text/css">
+    .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:#dbcc8f;
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:690px;
+        color:#555 !important;
+        font-family:'Tahoma';
+        font-size:14px;
+    }
+    .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+        color: false;
+    }
+
+</style>
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Tahoma, sans-serif;
+    }
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-family: Tahoma, sans-serif;
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-family: Tahoma, sans-serif;
+    }
+    .form-header-group {
+      font-family: Tahoma, sans-serif;
+    }
+    .form-label {
+      font-family: Tahoma, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: inline-block;
+    float: left;
+    text-align: left;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px 36px 12px 36px px;
+      margin-bottom: 12px 36px 12px 36px px;
+    }
+  
+    .form-all {
+      max-width: 690px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 150px;
+    }
+  
+    .form-all {
+      font-size: 14px
+    }
+    .form-all .qq-upload-button,
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-size: 14px
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-size: 14px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: rgb(207, 204, 200);
+    }
+  
+    .form-all {
+      color: #555;
+    }
+    .form-header-group .form-header {
+      color: rgb(253, 143, 41);
+    }
+    .form-header-group .form-subHeader {
+      color: #555;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label {
+      color: #555;
+    }
+    .form-sub-label {
+      color: #6f6f6f;
+    }
+  
+    .supernova {
+      background-color: rgb(143, 138, 131);
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: undefined;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+      .form-all {
+        background-image: url("https://www.jotform.com/images/noises/noise.png");
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center top;
+      }
+    
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+</head>
+<body><br><br><br><br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              Eligibility To Create NYP Unit
+            </h2>
+          </div>
+        </div>
+      </li>
+     <p>
+      <h2>FORMATION OF NATIONAL YOUTH PROJECT </h2>
+  Minimum 20 like-minded youths may form village/Town/Organization level NATIONAL YOUTH PROJECT UNIT. There will be only one unit at one place. However, second unit can be formed in exceptional cases.
+Eligibility to become a member of NYP unit:  <br>
+  <h2>Unit Membership will be of two types: </h2>
+(a) I. Member: Age group 15-30 years (for minor, willingness from the guardian will be compulsory.) 
+
+II. Senior member: Age above 30 years  <br>
+
+(b) Willing to work for the betterment of Mother India<br>
+(c) Believe that all are equal irrespective of race, religion, culture, language, region etc.  Motto: “Unity in diversity” 
+<h3>Disqualification: Any member will cease to be a member if</h3>
+I.  Convicted by any court.  <br>
+II. Proved Embezzlement of unit funds.<br>
+III.  Any action/activity that shows unfaithfulness towards NYP or brings bad name to NYP.  <br>
+<h3>Registration Fee:</h3>
+(a) Registration fee for members Rs. 25/- per member, for senior members Rs. 50/- per member. <br>
+(b) Annual renewal fee, based on the date of issuance of registration certificate, will be Rs. 10/- and Rs. 20/- respectively for members and senior members. At the time of renewal of unit, new members will be charged at the rate of new members. Revised list of members indicating names removed and new members added will also be submitted alongwith.   
+<h3>Office bearers and their responsibilities:</h3>
+(a) Each NATIONAL YOUTH PROJECT UNIT will unanimously appoint Convener, Deputy Convener, Secretary, Treasurer and Three executive Committee members. In case of any office falling vacant due to resignation or otherwise, appointment will be made in the meeting of general body. In case of any dispute, matter will be referred to NYP head office and the decision of NYP Headquarter will be final.<br>
+(b) Unit executive Committee will meet once a month.<br>
+(c) Unit Convener will be the chief worker of the unit. He will be responsible to co-ordinate activities of all the members. In his absence, Deputy Convener will act as convener. <br>
+(d) Correspondence and maintenance of record will be the responsibility of Unit Secretary. <br>
+(e) Treasurer will be custodian of amounts collected as fees, donations etc. and keep a proper record of all transactions.<br>
+<h3>Monthly Programs: </h3>
+(a) Each unit will organize a minimum of four monthly programmes.<br>
+(a) Priority for Camp invitation. <br>
+(b) Normal camp registration fee to be charged from members. Registration fee for non-member Campers, if allowed to join, will be minimum Rs 500/- or double than normal camp registration fee, whichever is higher.  <br>
+(c) Only NYP unit members will be eligible for applying to NYP NATIONAL INTEGRATION YOUTH AWARD   to be instituted shortly after Covid-19 is over and normalcy prevails.<br>
+(d) NYP is a transparent organization. Hence unit members have a right to seek any information about its working.<br> 
+(e) Any special privilege to be decided by NYP Trust from time to time.
+Legal Jurisdiction<br>
+Disputes, if any, are subject to jurisdiction of courts at New Delhi. 
+
+<h6>NOTE: Rules regarding formation of committees at district level and State level will be shared in due course.</h6>  
+<h5>Mode of payment of Registration fee:</h5>
+ By direct payment into NYP account, the detail of which is as under:<br>
+National Youth Project<br>
+A/C 0158101013460<br>
+IFSC Code CNRB0000158<br>
+Canara Bank, Deen Dayal Updhyaya Marg, New Delhi <br>  
+
+<h4>DECLARATION</h4>
+We the undersigned hereby declare that information furnished above is correct to the best of our knowledge and belief and nothing has been hidden.<br>
+1.  Convener:<br>
+2.  Deputy Convener:<br><br>
+
+<h6>NOTE: If you do not have access to online submission of this form, you may get a print out of it and submit in the form of a hard copy addressed to:</h6>
+Director, <br>
+National Youth Project<br>
+Room No. 11<br>
+Gandhi Peace Foundation<br>
+221, Deen Dayal  Updhyaya Marg, New Delhi.<br>
+
+
+  </p>
+      <li class="form-line"  id="">
+        <label class="form-label form-label-left form-label-auto" >Total No Of Member in Your Unit</label>
+        <div  class="form-input">
+          <input type="number" required name="val" placeholder="Min 20" min="20" class="form-textbox"/>
+        </div>
+      </li>
+      
+      </li>
+      <li class="form-line" data-type="control_button" id="">
+        <div id="cid_106" class="form-input-wide">
+          <div style="text-align:center" data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+            <button id="input_106" type="submit" class="form-submit-button form-submit-button-simple_black submit-button jf-form-buttons jsTest-submitField" >
+              Agree & Proceed
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div><br><br><br>
+</form></body>
+{% endblock %}

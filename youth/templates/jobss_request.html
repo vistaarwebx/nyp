@@ -1,0 +1,87 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">JOb/Internships Requests</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row el-element-overlay">
+            {% for i in jobde %}
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="el-card-item">
+                        <div class="el-card-avatar el-overlay-1"> <img src="{{ i.image.url }}" alt="user" />
+                            <div class="el-overlay">
+                                <ul class="list-style-none el-info">
+                                    <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" href="{{ i.image.url }}"><i class="mdi mdi-magnify-plus"></i></a></li>
+                                    <li class="el-item"><a class="btn default btn-outline el-link" href="{% url 'jobsingle' i.id %}"><i class="mdi mdi-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="el-card-content">
+                            <h4 class="m-b-0">{{ i.first_name }} {{ i.last_name }}</h4> <span class="text-muted">{{ i.date }}</span>
+                            <a href="{% url 'job_activate' i.pk %}"><button type="button" class="btn btn-cyan btn-sm">Make Employee</button></a>
+                            <a href="{% url 'job_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+   
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+
+{%  endblock %}

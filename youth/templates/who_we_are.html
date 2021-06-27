@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="hero-wrap hero-bread" style="background-image: url({% static 'images/camp.jpg' %});">
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span></span></p>
+          <h1 class="mb-0 bread">Who We Are</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 ftco-animate">
+                <a href="{% static 'images/aa.jpg' %}" class="image-popup prod-img-bg"><img src="{% static 'images/aa.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+            </div>
+            <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                <h3>National Youth Project (NYP)</h3>
+                
+                <p>was launched in 1970 under the leadership of Dr. S.N. Subba Rao. Under this project, many youth camps have been organized in order to give the message of peace, harmony, and brotherhood in the youth. These camps motivate youth and ignite a feeling of unity in them through one religion prayer. Such camps help youth to understand what national integration is. The motivating force for the youth to join this movement is to free their country from shortcomings and to see a developed and evolved democracy. The youth could establish that despite the difference of religion, caste, language, or status. They could live together and grow symbiotically, be friendly with one another, bring forth living to mean to the spirit of “unity in diversity”.Dr. Subba Rao believes and tries to give this message through the youth camps that
+                    </p>
+                 <h5>“ACCEPT EVERYTHING THAT MAKES YOU STRONG: STRONG PHYSICALLY, INTELLECTUALLY AND SPIRITUALLY; REJECT EVERYTHING THAT MAKES YOU WEAK.”</h5>   
+                </div>
+                </div>
+                        
+        <div class="row mt-5">
+      <div class="col-md-12 nav-link-wrap">
+        <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">National integration camps</a>
+
+          <a class="nav-link ftco-animate mr-lg-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Relief camps</a>
+
+          <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Communal harmony camps</a>
+
+        </div>
+      </div>
+      <div class="col-md-12 tab-wrap">
+        
+        <div class="tab-content bg-light" id="v-pills-tabContent">
+
+          <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
+              <div class="p-4">
+                  <h3 class="mb-4">National integration camps</h3>
+                  <p>National integration camps are being organized in india for a long time. The objective of these camps is to build a unity and peace with spritual harmony between different states and cultures of India.</p>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
+              <div class="p-4">
+                  <h3 class="mb-4">Relief camps</h3>
+                  <p>The Relief Camp Workers' Union (RCWU) was a union in which the workers employed in the Canadian government relief camps organized themselves into in the early 1930s. The RCWU was established by the Workers' Unity League and was associated with the Communist Party of Canada.[1] The creation of the union was a direct response to the conditions of the camps and the lack of financial compensation for the work the men provided.</p>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
+            <div class="p-4">
+                <h3 class="mb-4">Communal harmony camps</h3>
+                <p>Addressed an energetic group of around 400 youth from 22 states attending "International Integration and Communal Harmony Youth Camp" organized by National Youth Project (NYP) and 
+                    @HSSOffice
+                     at Gandhi Ashram, Delhi.</p>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

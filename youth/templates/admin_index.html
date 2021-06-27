@@ -1,0 +1,236 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Dashboard</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    
+       
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Volunteer Request</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in volfal %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="{{ i.gender }}" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.first_name }}</h6>
+                                        <h6 class="font-medium">{{ i.education }}</h6>
+                                        <span class="m-b-15 d-block">{{ i.city }}</span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.date }}</span> 
+                                            <a href="{% url 'volunteersingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a>
+                                            <a href="{% url 'volunteer_activate' i.pk %}"><button type="button" class="btn btn-cyan btn-sm">Make Volunteer</button></a>
+                                            <a href="{% url 'volunteer_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div>   
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Job/Internship Request</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in jobde %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="{{ i.gender }}" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.first_name }}</h6>
+                                        <h6 class="font-medium">{{ i.education }}</h6>
+                                        <span class="m-b-15 d-block">{{ i.city }}</span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.date }}</span> 
+                                            <a href="{% url 'jobsingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a>
+                                            <a href="{% url 'job_activate' i.pk %}"><button type="button" class="btn btn-cyan btn-sm">Make Employee</button></a>
+                                            <a href="{% url 'job_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div>     
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Employees</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in jobactivate %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="{{ i.gender }}" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.first_name }}</h6>
+                                        <h6 class="font-medium">{{ i.education }}</h6>
+                                        <span class="m-b-15 d-block">{{ i.city }}</span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.activatedate }}</span> 
+                                            <a href="{% url 'jobsingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a>
+                                            <a href="{% url 'job_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div>     
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Volunteers</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in volunteer %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="{{ i.gender }}" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.first_name }}</h6>
+                                        <h6 class="font-medium">{{ i.education }}</h6>
+                                        <span class="m-b-15 d-block">{{ i.city }}</span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.activatedate }}</span>
+                                            <a href="{% url 'volunteersingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a>  
+                                            <a href="{% url 'volunteer_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- column -->
+
+                    <div class="col-lg-6">
+                       
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Nyp Alumni Membership Request</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in nypdeactive %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.name }}</h6>
+                                        <h6 class="font-medium"></h6>
+                                        <span class="m-b-15 d-block"></span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.date }}</span> 
+                                            <a href="{% url 'nyp_activate' i.pk %}"><button type="button" class="btn btn-cyan btn-sm">Add Unit</button></a>
+                                            <a href="{% url 'nypsingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a> 
+                                            <a href="{% url 'nyp_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div> 
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Nyp Alumni Units</h4>
+                            </div>
+                            <div class="comment-widgets scrollable">
+                                <!-- Comment Row -->
+                                {% for i in nypactive %}
+                                <div class="d-flex flex-row comment-row m-t-0">
+                                    <div class="p-2"><img src="{{ i.image.url }}" alt="" width="50" class="rounded-circle"></div>
+                                    <div class="comment-text w-100">
+                                        <h6 class="font-medium">{{ i.name }}</h6>
+                                        <h6 class="font-medium"></h6>
+                                        <span class="m-b-15 d-block"></span>
+                                        <div class="comment-footer">
+                                            <span class="text-muted float-right">{{ i.activatedate }}</span> 
+                                            <a href="{% url 'nyp_delete' i.id %}"><button type="button"  class="btn btn-danger btn-sm">Delete</button></a>
+                                            <a href="{% url 'nypsingle' i.id %}"><button class="btn btn-cyan btn-sm">See Detail</button></a> 
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                    
+                            </div>
+                        </div> 
+                       
+
+
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">News Letter</h4>
+                            
+                      {% for i in contc %}
+                        <div class="accordion" id="accordionExample">
+                            <div class="card m-b-0">
+                                <div class="card-header" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="mdi mdi-calendar-check" aria-hidden="true"></i>
+                                        <span>{{ i.name }}</span>
+                                    </a>
+                                  </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                      <h3>{{ i.subject }}</h3>
+                                    {{ i.message }}
+                                  </div>
+                                </div>
+                            </div>
+                        {% endfor %}   
+                          
+                        </div>
+                       
+                        
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent comment and chats -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ========================
+{% endblock %}

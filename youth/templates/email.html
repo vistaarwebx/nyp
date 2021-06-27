@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Free Contact Form :: W3layouts</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<style>
+* {
+  box-sizing: border-box; background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+
+
+.column {
+  float: left;
+  width: 48%;
+  padding: 5px;
+
+}
+
+/* Clearfix (clear floats) */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+
+}
+
+th {
+  text-align: left;
+  padding: 16px;
+  background-color:#98AFC7;
+}
+
+ td {
+  text-align: left;
+  padding: 16px;
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+   color: #FF0000;
+}
+</style>
+</head>
+<body>
+  <section class="w3l-contact-1">
+    <div class="contacts-9 section-gap">
+      <div class="wrapper">
+        <h3 class="global-title text-center">Send Mail to Everyone</h3>
+        <div class="d-list contact-view">
+          <div class="cont-details">
+            <div class="cont-top">
+              <div class="cont-right text-center">
+
+              </div>
+
+          <div class="map-content-9">
+
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="twice">
+                <input type="text" class="form-control" required name="sub" placeholder="Subject">
+              </div>
+              <textarea  class="form-control" required name="msg" placeholder="Write Mail" ></textarea>
+                <center>
+              <button type="submit" class="btn btn-contact">Send Mail</button>
+                </center>
+            </form> <br><br>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

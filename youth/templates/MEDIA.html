@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% load embed_video_tags %}
+
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	
+	input[type=text], select, textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  resize: vertical;
+	}
+	
+	label {
+	  padding: 12px 12px 12px 0;
+	  display: inline-block;
+	}
+	
+	input[type=submit] {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  float: right;
+	}
+	
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+	
+	.containerss {
+	  border-radius: 5px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+	}
+	
+	.col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+	
+	.col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}
+	
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+	  .col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	  }
+	}
+	</style>
+	<div class="hero-wrap hero-bread" style="background-image: url({% static 'images/camp.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Gallery</span></p>
+            <h1 class="mb-0 bread">Media</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+	{% if request.user.is_authenticated %}
+	<center>
+	<h1>Add Press Release</h1>
+	</center><br>
+	<div class="containerss">
+	  <form action="" method="POST">
+		  {% csrf_token %}
+		<div class="row">
+		  <div class="col-25">
+			<label for="country"> Add New Video</label>
+		  </div>
+		  <div class="col-75">
+		  <input type="url" id="lname" name="title" placeholder="Enter video url..">
+		  </div>
+		</div>
+		<div class="row">
+		  <center>
+		  <input type="submit" value="Add Media Release Video">
+		</center>
+		</div>
+	  </form>
+	</div><br><br>
+	
+	{% endif %}
+		<br><br><br>
+						<center>
+									{% for i in vid %}
+									{% video i.video 'small' %}
+									{% if request.user.is_authenticated %}
+									<p><a href="{% url 'media_delete' i.id  %}" class="btn btn-primary py-2 px-3"  style="background-color:red;">Delete </a></p>
+									{% endif %}
+
+									{% endfor %}
+
+								</center>
+
+										<br><br><br><br><br><br>
+
+
+
+	{% endblock %}

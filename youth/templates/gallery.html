@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	
+	input[type=text], select, textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  resize: vertical;
+	}
+	
+	label {
+	  padding: 12px 12px 12px 0;
+	  display: inline-block;
+	}
+	
+	input[type=submit] {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  float: right;
+	}
+	
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+	
+	.containerss {
+	  border-radius: 5px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+	}
+	
+	.col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+	
+	.col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}
+	
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+	  .col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	  }
+	}
+	</style>
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/camp.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Gallery</span></p>
+            <h1 class="mb-0 bread">Gallery</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section bg-light">
+    	<div class="containerss">
+    		<div class="row">
+				{% if request.user.is_authenticated %}
+				<center>
+				<h2>Add Gallery Images</h2>
+				</center><br>
+				<div class="container">
+				  <form action="" method="POST">
+					  {% csrf_token %}
+					<div class="row">
+					  <div class="col-25">
+						<label for="fname">Image Title</label>
+					  </div>
+					  <div class="col-75">
+						<input type="text" id="fname" name="title" placeholder="Image name..">
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-25">
+						<label for="country">Select Image</label>
+					  </div>
+					  <div class="col-75">
+					  <input type="file" id="lname" name="image" placeholder="Your last name..">
+					  </div>
+					</div>
+					<div class="row">
+					  <center>
+					  <input type="submit" value="Add Image">
+					</center>
+					</div>
+				  </form>
+				</div><br><br><br>
+				
+				{% endif %}
+    			<div class="col-md-8 col-lg-10 order-md-last"><br><br>
+    				<div class="row">
+						{% for i in post %}
+		    			<div class="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
+		    				<div class="product d-flex flex-column">
+		    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ i.image.url }}" alt="Colorlib Template">
+		    						<div class="overlay"></div>
+		    					</a>
+		    					<div class="text py-3 pb-4 px-3">
+		    						<div class="d-flex">
+		    							<div class="cat">
+				    						<span>{{ i.title }}</span>
+				    					</div>
+			    					</div>
+									<h3><a href="#"></a></h3>
+									{% if request.user.is_authenticated %}
+									<p><a href="{% url 'gallery_delete' i.id %}" class="btn btn-primary py-2 px-3"  style="background-color:red;">Delete Image</a></p>
+									{% endif %}
+		    					</div>
+		    				</div>
+		    			</div>
+						{% endfor %}
+
+
+
+		    	</div>
+
+				</div>
+			</div>
+    	</div>
+    </section>
+	{% endblock %}

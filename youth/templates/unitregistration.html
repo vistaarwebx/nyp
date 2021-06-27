@@ -1,0 +1,451 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.22395" rel="stylesheet" type="text/css" />
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.22395" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/54be8d1c700cc4d5368b4567.css?themeRevisionID=5cf3a162dd9c567eaf536421"/>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.22395" />
+    <style type="text/css">
+        .form-label-left{
+            width:150px;
+        }
+        .form-line{
+            padding-top:12px;
+            padding-bottom:12px;
+        }
+        .form-label-right{
+            width:150px;
+        }
+        body, html{
+            margin:0;
+            padding:0;
+            background:#dbcc8f;
+        }
+
+        .form-all{
+            margin:0px auto;
+            padding-top:0px;
+            width:690px;
+            color:#555 !important;
+            font-family:'Tahoma';
+            font-size:14px;
+        }
+        .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+            color: false;
+        }
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
+    <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+    <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.22395" type="text/javascript"></script>
+
+    
+
+
+    <script type="text/javascript">
+       JotForm.setConditions([{"action":[{"field":"9","visibility":"Show","id":"action_0_1579704830003"}],"id":"1579704830003","index":"0","link":"Any","priority":"0","terms":[{"field":"8","operator":"equals","value":"Other (Please specify...)"}],"type":"field"}]);
+        JotForm.init(function(){
+          setTimeout(function() {
+              $('input_6').hint('enter your email');
+           }, 20);
+          setTimeout(function() {
+              $('input_96').hint('ex:30');
+           }, 20);
+        JotForm.newDefaultTheme = false;
+        JotForm.extendsNewTheme = false;
+        JotForm.newPaymentUIForNewCreatedForms = false;
+          JotForm.alterTexts({"couponApply":"Apply","couponBlank":"Please enter a coupon.","couponChange":"","couponEnter":"Enter coupon","couponExpired":"Coupon is expired. Please try another one.","couponInvalid":"Coupon is invalid.","couponValid":"Coupon is valid.","shippingShipping":"Shipping","taxTax":"Tax","totalSubtotal":"Subtotal","totalTotal":"Total"}, true);
+        JotForm.clearFieldOnHide="disable";
+        /*INIT-END*/
+        });
+
+       JotForm.prepareCalculationsOnTheFly([null,{"name":"unitRegistration","qid":"1","text":"Unit Registration Campaign:","type":"control_head"},null,{"description":"","name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},{"description":"","name":"address4","qid":"4","text":"Address","type":"control_address"},{"description":"","name":"phoneNumber5","qid":"5","text":"Phone Number","type":"control_phone"},{"description":"","name":"email6","qid":"6","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"clickTo7","qid":"7","text":"","type":"control_text"},null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"enterUnit","qid":"19","subLabel":"","text":"Enter Unit Name","type":"control_email"},null,null,null,null,null,null,null,{"name":"divider","qid":"27","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"unitLeader","qid":"72","text":"Unit leader Information","type":"control_head"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"age","qid":"96","subLabel":"senior citizen","text":"Age","type":"control_number"},null,null,null,null,{"name":"otherCommittee101","qid":"101","text":"Other Committee Members","type":"control_head"},{"description":"","name":"typeA","qid":"102","text":"Type a question","type":"control_matrix"},{"name":"typeA103","qid":"103","text":"Terms and Conditions","type":"control_widget"},null,null,{"name":"submit","qid":"106","text":"Submit","type":"control_button"}]);
+       setTimeout(function() {
+    JotForm.paymentExtrasOnTheFly([null,{"name":"unitRegistration","qid":"1","text":"Unit Registration Campaign:","type":"control_head"},null,{"description":"","name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},{"description":"","name":"address4","qid":"4","text":"Address","type":"control_address"},{"description":"","name":"phoneNumber5","qid":"5","text":"Phone Number","type":"control_phone"},{"description":"","name":"email6","qid":"6","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"clickTo7","qid":"7","text":"","type":"control_text"},null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"enterUnit","qid":"19","subLabel":"","text":"Enter Unit Name","type":"control_email"},null,null,null,null,null,null,null,{"name":"divider","qid":"27","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"unitLeader","qid":"72","text":"Unit leader Information","type":"control_head"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"description":"","name":"age","qid":"96","subLabel":"senior citizen","text":"Age","type":"control_number"},null,null,null,null,{"name":"otherCommittee101","qid":"101","text":"Other Committee Members","type":"control_head"},{"description":"","name":"typeA","qid":"102","text":"Type a question","type":"control_matrix"},{"name":"typeA103","qid":"103","text":"Terms and Conditions","type":"control_widget"},null,null,{"name":"submit","qid":"106","text":"Submit","type":"control_button"}]);}, 20);
+    </script>
+<br>
+<body>
+    {% if error %}
+    <script>
+        alert ("Block already exist Contact Our Team")
+    </script>
+     {% endif %}
+<form class="jotform-form" action="" method="post" name="form_203484248105452" id="203484248105452" accept-charset="utf-8" autocomplete="on">
+   {% csrf_token %}
+  <input type="hidden" name="formID" value="203484248105452" />
+  <input type="hidden" id="JWTContainer" value="" />
+  <input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              Unit Registration Campaign:
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_19">
+        <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> Enter Unit Name </label>
+        <div id="cid_19" class="form-input">
+          <input type="text" id="input_19" required name="tname" class="form-textbox validate" size="30" value="" data-component="text" aria-labelledby="label_19" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_115">
+        <label class="form-label form-label-left form-label-auto" id="label_115" for="input_115">Upload your Unit image </label>
+        <div>
+          <input type="file" id="" name="imagegrp"><br><br>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_27">
+        <div id="cid_27" class="form-input-wide">
+          <div data-component="divider" style="border-bottom:1px solid #e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px">
+          </div>
+        </div>
+      </li>
+      <li id="cid_72" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_72" class="form-header" data-component="header">
+              Unit leader Information
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_3">
+        <label class="form-label form-label-left form-label-auto" id="label_3" for="first_3">
+          Full Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_3" class="form-input jf-required">
+          <div data-wrapper-react="true">
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+              <input type="text" id="first_3" name="adname" class="form-textbox validate[required]" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" />
+              <label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+              <input type="text" id="last_3" name="qadsur" class="form-textbox validate[required]" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" />
+              <label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+            </span>
+          </div>
+        </div>
+      </li>
+       <li class="form-line form-line-column form-col-3" data-type="control_number" id="id_96">
+        <label class="form-label form-label-left form-label-auto" id="label_96" for="input_96"> Age </label>
+        <div id="cid_96" class="form-input">
+          <span class="form-sub-label-container" style="vertical-align:top">
+            <input type="number" id="input_96" name="age" data-type="input-number" class=" form-number-input form-textbox" style="width:60px" size="5" value="" placeholder="ex:30" data-numbermin="30" data-numbermax="100" data-component="number" aria-labelledby="label_96 sublabel_input_96" step="any" />
+            <label class="form-sub-label" for="input_96" id="sublabel_input_96" style="min-height:13px" aria-hidden="false"> senior citizen </label>
+          </span>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_address" id="id_4" data-compound-hint=",,,,,">
+        <label class="form-label form-label-top" id="label_4" for="input_4_addr_line1">
+          Address
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_4" class="form-input-wide jf-required">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+              <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_4_addr_line1" name="adadd" class="form-textbox validate[required] form-address-line" value="" data-component="address_line_1" aria-labelledby="label_4 sublabel_4_addr_line1" required="" />
+                  <label class="form-sub-label" for="input_4_addr_line1" id="sublabel_4_addr_line1" style="min-height:13px" aria-hidden="false"> Street Address </label>
+                </span>
+              </span>
+            </div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+              <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_4_addr_line2" name="addr2" class="form-textbox form-address-line" value="" data-component="address_line_2" aria-labelledby="label_4 sublabel_4_addr_line2" />
+                  <label class="form-sub-label" for="input_4_addr_line2" id="sublabel_4_addr_line2" style="min-height:13px" aria-hidden="false"> Street Address Line 2 </label>
+                </span>
+              </span>
+            </div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+              <span class="form-address-line form-address-city-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_4_city" name="adcity" class="form-textbox validate[required] form-address-city" value="" data-component="city" aria-labelledby="label_4 sublabel_4_city" required="" />
+                  <label class="form-sub-label" for="input_4_city" id="sublabel_4_city" style="min-height:13px" aria-hidden="false"> City </label>
+                </span>
+              </span>
+              <span class="form-address-line form-address-state-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_4_state" name="state" class="form-textbox validate[required] form-address-state" value="" data-component="state" aria-labelledby="label_4 sublabel_4_state" required="" />
+                  <label class="form-sub-label" for="input_4_state" id="sublabel_4_state" style="min-height:13px" aria-hidden="false"> State </label>
+                </span>
+              </span>
+            </div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+              <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_4_postal" name="block" class="form-textbox validate[required] form-address-postal" value="" data-component="zip" aria-labelledby="label_4 sublabel_4_postal" required="" />
+                  <label class="form-sub-label" for="input_4_postal" id="sublabel_4_postal" style="min-height:13px" aria-hidden="false"> Block </label>
+                </span>
+              </span>
+              <span class="form-address-line form-address-country-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <select class="form-dropdown form-address-country noTranslate" name="count" id="input_4_country" data-component="country" required="" aria-labelledby="label_4 sublabel_4_country">
+                    <option value=""> Please Select </option>
+                    <option value="United States"> United States </option>
+                    <option value="Afghanistan"> Afghanistan </option>
+                    <option value="Albania"> Albania </option>
+                    <option value="Algeria"> Algeria </option>
+                    <option value="American Samoa"> American Samoa </option>
+                    <option value="Andorra"> Andorra </option>
+                    <option value="Angola"> Angola </option>
+                    <option value="Anguilla"> Anguilla </option>
+                    <option value="Antigua and Barbuda"> Antigua and Barbuda </option>
+                    <option value="Argentina"> Argentina </option>
+                    <option value="Armenia"> Armenia </option>
+                    <option value="Aruba"> Aruba </option>
+                    <option value="Australia"> Australia </option>
+                    <option value="Austria"> Austria </option>
+                    <option value="Azerbaijan"> Azerbaijan </option>
+                    <option value="Brunei"> Brunei </option>
+                    <option value="Bulgaria"> Bulgaria </option>
+                    <option value="Burkina Faso"> Burkina Faso </option>
+                    <option value="Burundi"> Burundi </option>
+                    <option value="Cambodia"> Cambodia </option>
+                    <option value="Cameroon"> Cameroon </option>
+                    <option value="Canada"> Canada </option>
+                    <option value="Cape Verde"> Cape Verde </option>
+                    <option value="Cayman Islands"> Cayman Islands </option>
+                    <option value="Central African Republic"> Central African Republic </option>
+                    <option value="Chad"> Chad </option>
+                    <option value="Chile"> Chile </option>
+                    <option value="China"> China </option>
+                    <option value="Guinea-Bissau"> Guinea-Bissau </option>
+                    <option value="Guyana"> Guyana </option>
+                    <option value="Haiti"> Haiti </option>
+                    <option value="Honduras"> Honduras </option>
+                    <option value="Hong Kong"> Hong Kong </option>
+                    <option value="Hungary"> Hungary </option>
+                    <option value="Iceland"> Iceland </option>
+                    <option selected="" value="India"> India </option>
+                    <option value="Indonesia"> Indonesia </option>
+                    <option value="Iran"> Iran </option>
+                    <option value="Iraq"> Iraq </option>
+                    <option value="Ireland"> Ireland </option>
+                    <option value="Israel"> Israel </option>
+                    <option value="Italy"> Italy </option>
+                    <option value="Jamaica"> Jamaica </option>
+                    <option value="Japan"> Japan </option>
+                    <option value="Jersey"> Jersey </option>
+                    <option value="Jordan"> Jordan </option>
+                    <option value="Kazakhstan"> Kazakhstan </option>
+                    <option value="Kenya"> Kenya </option>
+                    <option value="Kiribati"> Kiribati </option>
+                    <option value="North Korea"> North Korea </option>
+                    <option value="South Korea"> South Korea </option>
+                    <option value="Kosovo"> Kosovo </option>
+                    <option value="Kuwait"> Kuwait </option>
+                    <option value="Kyrgyzstan"> Kyrgyzstan </option>
+                    <option value="Laos"> Laos </option>
+                    <option value="Latvia"> Latvia </option>
+                    <option value="Lebanon"> Lebanon </option>
+                    <option value="Lesotho"> Lesotho </option>
+                    <option value="Liberia"> Liberia </option>
+                    <option value="Libya"> Libya </option>
+                    <option value="other"> Other </option>
+                  </select>
+                  <label class="form-sub-label" for="input_4_country" id="sublabel_4_country" style="min-height:13px" aria-hidden="false"> Country </label>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2" data-type="control_email" id="id_6">
+        <label class="form-label form-label-left form-label-auto" id="label_6" for="input_6"> E-mail </label>
+        <div id="cid_6" class="form-input">
+          <span class="form-sub-label-container" style="vertical-align:top">
+            <input type="email" id="input_6" required name="ademail" class="form-textbox validate[Email]" size="30" value="" placeholder="enter your email" data-component="email" aria-labelledby="label_6 sublabel_input_6" />
+            <label class="form-sub-label" for="input_6" id="sublabel_input_6" style="min-height:13px" aria-hidden="false"> example@example.com </label>
+          </span>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_115">
+        <label class="form-label form-label-left form-label-auto" id="label_115" for="input_115">Upload your image </label>
+        <div>
+          <input type="file" id="" name="adminimg"><br><br>
+        </div>
+      </li>
+
+      <li class="form-line form-line-column form-col-4 jf-required" data-type="control_phone" id="id_5">
+        <label class="form-label form-label-left form-label-auto" id="label_5" >
+          Phone Number
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_5" class="form-input jf-required">
+          <div data-wrapper-react="true">
+             <span class="form-address-line form-address-country-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <select class="form-dropdown form-address-country noTranslate" name="areacod" id="input_5_country" data-component="country" required="" aria-labelledby="label_4 sublabel_4_country">
+                    <option selected="" value="+91"> +91 India </option>
+                    <option value="93"> 93  Afghanistan </option>
+                    <option value="355"> 355 Albania </option>
+                    <option value="61"> 61  Australia </option>
+                    <option value="55"> 55 Brazil</option>
+                    <option value="1"> 1 Canada </option>
+                    <option value="86"> 86 China </option>
+                    <option value="20"> 20 Egypt</option>
+                    <option value="33 ">33 France </option>
+                    <option value="30"> 30 Greece </option>
+
+                  </select>
+                  <label class="form-sub-label" for="input_4_country" id="sublabel_5_country" style="min-height:13px" aria-hidden="false"> Area code </label>
+                </span>
+              </span>
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+              <input type="tel" id="input_5_phone" name="admob" class="form-textbox validate[required]" value="" data-component="phone" aria-labelledby="label_5 sublabel_5_phone" required="" />
+              <label class="form-sub-label" for="input_5_phone" id="sublabel_5_phone" style="min-height:13px" aria-hidden="false"> Mobile Number </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_7">
+        <div id="cid_7" class="form-input-wide">
+          <div id="text_7" class="form-html" data-component="text">
+            <hr />
+          </div>
+        </div>
+      </li>
+      <li id="cid_101" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_101" class="form-header" data-component="header">
+              Other Committee Members
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_matrix" id="id_102">
+        <label class="form-label form-label-top" id="label_102" >
+          <span class="form-required">
+
+          </span>
+        </label>
+        <div id="cid_102" class="form-input-wide jf-required">
+          <table summary="" role="presentation" cellPadding="4" cellSpacing="0" class="form-matrix-table" style="width:650px" data-component="matrix">
+           <tr class="form-matrix-tr form-matrix-header-tr">
+              <th class="form-matrix-th" style="border:none">
+                 
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
+                <label id="label_102_col_0"> Name </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
+                <label id="label_102_col_1"> position </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_2">
+                <label id="label_102_col_2"> Age </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_3">
+                <label id="label_102_col_3"> Education </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_4">
+                <label id="label_102_col_4"> Occupation </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_5">
+                <label id="label_102_col_5"> Mobile No </label>
+              </th>
+              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_6">
+                <label id="label_102_col_6"> E-mail </label>
+              </th>
+            </tr>
+
+{% for i in li %}
+
+            <tr class="form-matrix-tr form-matrix-value-tr" role="group" aria-labelledby="label_102 label_102_row_1">
+              <th scope="row" class="form-matrix-headers form-matrix-row-headers">
+                <label id="label_102_row_1"> {{forloop.counter}} </label>
+              </th>
+              <td class="form-matrix-values">
+                <input type="text" id="input_102_1_0" placeholder="Name" class="form-textbox validate[required, requireEveryRow]" size="5" required name="membername{{forloop.counter}}" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_102_col_0" />
+              </td>
+              <td class="form-matrix-values">
+                 <select id="cars"name="position{{forloop.counter}}" style="width:100%;box-sizing:border-box"  class="form-textbox validate[required, requireEveryRow]>
+                          <option selected="" value="Member" > Member </option>
+                          <option value="Member" > Member </option>
+                          <option value="Other"> Other </option>
+                          <option value="Deputy Convener"> Deputy Convener </option>
+                          <option value="Secretary"> Secretary </option>
+                          <option value="Treasurer"> Treasurer </option>
+                          <option value="Convener"> Convener </option>
+                </select>
+              </td>
+              <td class="form-matrix-values">
+                <input type="text"  placeholder="Age" class="form-textbox validate[required, requireEveryRow]" size="5" required name="Age{{forloop.counter}}" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_102_col_1" />
+              </td>
+              <td class="form-matrix-values">
+                <input type="text" id="input_102_1_3"placeholder="Education"  class="form-textbox validate[required, requireEveryRow]" size="5" required name="Education{{forloop.counter}}" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_102_col_3" />
+              </td>
+              <td class="form-matrix-values">
+                <input type="text" id="input_102_1_4"placeholder="Occupation"  class="form-textbox validate[required, requireEveryRow]" size="5" required name="Occupation{{forloop.counter}}" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_102_col_4" />
+              </td>
+              <td class="form-matrix-values">
+                <input type="number" placeholder=" +91 -- Mobile-No"  class="form-textbox validate[required, requireEveryRow]" size="5" required name="Mobile{{forloop.counter}}" style="width:100%;box-sizing:border-box"  aria-labelledby="label_102_col_5" />
+              </td>
+              <td class="form-matrix-values">
+                <input type="email" id="input_102_1_6" placeholder="enter email" class="form-textbox" size="5"  name="mail{{forloop.counter}}" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_102_col_6" />
+              </td>
+            </tr>
+{% endfor %}
+          </table>
+        </div>
+      </li>
+    <div class="popup" id="popup-1">
+             <div class="overlay"></div>
+              <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <h1>FORMATION OF NATIONAL YOUTH PROJECT UNIT</h1>
+                  <p>Minimum 20 like-minded youths may form village/Town/Organization level NATIONAL YOUTH PROJECT UNIT. There will be only one unit at one place. However, second unit can be formed in exceptional cases.
+                        Eligibility to become a member of NYP unit:
+                            Unit Membership will be of two types:
+                        (a)	I. Member: Age group 15-30 years (for minor, willingness from the guardian will be compulsory.)
+                        II. Senior member: Age above 30 years
+                        (b)	Willing to work for the betterment of Mother India
+                        (c)	Believe that all are equal irrespective of race, religion, culture, language, region etc.  Motto: “Unity in diversity”
+                        Disqualification: Any member will cease to be a member if
+                        I.	Convicted by any court.
+                        II.	Proved Embezzlement of unit funds.
+                        III.	Any action/activity that shows unfaithfulness towards NYP or brings bad name to NYP.
+                        Registration Fee:
+                        (a)	Registration fee for members Rs. 25/- per member, for senior members Rs. 50/- per member.
+                        (b)	Annual renewal fee, based on the date of issuance of registration certificate, will be Rs. 10/- and Rs. 20/- respectively for members and senior members. At the time of renewal of unit, new members will be charged at the rate of new members. Revised list of members indicating names removed and new members added will also be submitted alongwith.
+                        Office bearers and their responsibilities:
+                        (a)	Each NATIONAL YOUTH PROJECT UNIT will unanimously appoint Convener, Deputy Convener, Secretary, Treasurer and Three executive Committee members. In case of any office falling vacant due to resignation or otherwise, appointment will be made in the meeting of general body. In case of any dispute, matter will be referred to NYP head office and the decision of NYP Headquarter will be final.
+                        (b)	Unit executive Committee will meet once a month.
+                        (c)	Unit Convener will be the chief worker of the unit. He will be responsible to co-ordinate activities of all the members. In his absence, Deputy Convener will act as convener.
+                        (d)	Correspondence and maintenance of record will be the responsibility of Unit Secretary.
+                        </p>
+                  </div>
+                      </div>
+                  <div><input type="radio"  required name="fed">Agree the terms and conditions<a onclick="togglePopup()"style="color:red;"> Read terms and conditions </a></div>
+
+      <br><br>
+      <li class="form-line" data-type="control_button" id="id_106">
+        <div id="cid_106" class="form-input-wide">
+          <div style="text-align:center" data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+            <button id="input_106" type="submit" class="form-submit-button form-submit-button-simple_black submit-button jf-form-buttons jsTest-submitField" >
+              Submit & Register
+            </button>
+              <p style="color:red;">CLICK SUBMIT,Please wait until the Form get Submitted</p>
+              <p style="color:red;">Your Application Will be approved after checking your Eligibility</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</form></body>
+{% endblock %}

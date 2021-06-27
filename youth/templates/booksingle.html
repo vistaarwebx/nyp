@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/camp.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Blog</span></p>
+            <h1 class="mb-0 bread">Single Blog</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+						<h2 class="mb-3">{{ buk.title }}</h2>
+            <p>
+              <img src="{{ buk.image.url }}" alt="" class="img-fluid">
+            </p>
+            <p>{{ buk.para }}</p>
+
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 CLASS="heading">Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="elfsight-app-8816c7d7-eb78-4404-8600-da17120eea69"></div>
+
+
+            </div>
+    	</div>
+    </section>
+
+   {% endblock %}

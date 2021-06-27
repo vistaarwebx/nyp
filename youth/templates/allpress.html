@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .containerss {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  </style>
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/camp.jpg' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Press</span></p>
+            <h1 class="mb-0 bread">Press Release</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="containerss">
+        <div class="row">
+          <div class="col-lg-8 order-lg-last ftco-animate">
+            {% if request.user.is_authenticated %}
+          <center>
+          <h1>Add Press Release</h1>
+          </center><br>
+          <div class="containerss">
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Press Title</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="title" placeholder=" title..">
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">Release Date</label>
+                </div>
+                <div class="col-75">
+                <input type="date" id="lname" name="date" placeholder="Your last name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="country"> Image</label>
+                </div>
+                <div class="col-75">
+                <input type="file" id="lname" name="image" placeholder="Your last name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject"> Detail</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="para" placeholder="Write Your Press detail here.." style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <center>
+                <input type="submit" value="Add Press Release">
+              </center>
+              </div>
+            </form>
+          </div><br><br>
+        
+          {% endif %}
+						<div class="row">
+					{% for i in post %}
+		          <div class="col-md-12 d-flex ftco-animate">
+		            <div class="blog-entry align-self-stretch d-md-flex">
+						<a href="{% url 'press_single' i.id %}" ><img src="{{ i.image.url }}" class="block-20"></a>
+		              </a>
+		              <div class="text d-block pl-md-4">
+		              	<div class="meta mb-3">
+		                  <div><a href="{% url 'post' i.id %}">{{ i.date }}</a></div>
+
+		                </div>
+		                <h3 class="heading"><a href="{% url 'post' i.id %}">{{ i.title }}</a></h3>
+		                <p><a href="{% url 'press_single' i.id %}" class="btn btn-primary py-2 px-3"  style="background-color: brown;">Read more</a></p>
+                    {% if request.user.is_authenticated %}
+                    <p><a href="{% url 'press_delete' i.id %}" class="btn btn-primary py-2 px-3"  style="background-color:red;">Delete </a></p>
+                    {% endif %}
+                  </div>
+		            </div>
+		          </div>
+		          {% endfor %}
+						</div>
+						<div class="row mt-2">
+		          <div class="col">
+		            <div class="block-27">
+		              <ul>
+		                <li><a href="#">&lt;</a></li>
+		                <li class="active"><span>1</span></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		                <li><a href="#">4</a></li>
+		                <li><a href="#">5</a></li>
+		                <li><a href="#">&gt;</a></li>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+              <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon ion-ios-search"></span>
+                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                </div>
+              </form>
+            </div>
+
+             <div class="sidebar-box ftco-animate">
+            	<h3 class="heading">Categories</h3>
+              <ul class="categories">
+                <li><a href="{% url 'book' %}">Books and Magzines <span></span></a></li>
+                <li><a href="{% url 'camps' %}">Event and camps <span></span></a></li>
+                <li><a href="{% url 'unitregistration' %}">Nyp Alumni Membership<span></span></a></li>
+              </ul>
+            </div>
+
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> April 27, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> April 27, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                <div class="text">
+                  <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> April 27, 2019</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">Tag Cloud</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">Books</a>
+                <a href="#" class="tag-cloud-link">Nyp alumni membership</a>
+                <a href="#" class="tag-cloud-link">Events and camps</a>
+                <a href="#" class="tag-cloud-link">be volunteer</a>
+                <a href="#" class="tag-cloud-link">job internship</a>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading">Paragraph</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+   {% endblock %}
+

@@ -1,0 +1,169 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Volunteer Detail</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo</h5>
+                        <img src="{{ volsingle.image.url }}" alt="Italian Trulli">
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Full Name</h5>
+                            <p>{{ volsingle.first_name }} {{ volsingle.last_name }} </p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Gender</h5>
+                            <p>{{ volsingle.gender }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application</h5>
+                            <p>{{ volsingle.date }}</p>
+                            
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application Approved</h5>
+                            <p>{{ volsingle.activatedate }}</p>
+                            
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Mail</h5>
+                            <p>{{ volsingle.email }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile No</h5>
+                            <p>{{ volsingle.Mobile_no }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Aadhar - No</h5>
+                            <p>{{ volsingle.adhar_no }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Birth</h5>
+                            <p>{{ volsingle.date_of_birth }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <p>{{ volsingle.education }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- drop down -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Address - 1</h5>
+                            <p>{{ volsingle.address1 }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Address - 2</h5>
+                            <p>{{ volsingle.address2 }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">city </h5>
+                            <p>{{ volsingle.city }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">State </h5>
+                            <p>{{ volsingle.state }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">block </h5>
+                            <p>{{ volsingle.block }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">country </h5>
+                            <p>{{ volsingle.country }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Any Organization</h5>
+                            <p>{{ volsingle.any_organization }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Previous Nyp Camp</h5>
+                            <p>{{ volsingle.nyp_camp }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">About </h5>
+                            <p>{{ volsingle.about_you }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

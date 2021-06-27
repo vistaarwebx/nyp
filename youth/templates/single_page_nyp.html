@@ -1,0 +1,134 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">NYP Unit Detail</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unit Photo</h5>
+                        <img src="{{ nypob.image.url }}" alt="Italian Trulli">
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Unit Name</h5>
+                            <p>{{ nypob.name }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application</h5>
+                            <p>{{ nypob.date }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application Approved</h5>
+                            <p>{{ nypob.activatedate }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- drop down -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unit Leader Photo</h5>
+                        <img src="{{ grpadmin.image.url }}" alt="Italian Trulli">
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Unit Leader Name</h5>
+                            <p>{{ grpadmin.grpName }}{{ grpadmin.grpsurname }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Unit Leader Mobile</h5>
+                            <p>{{ grpadmin.Mobile }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Unit Leader Address</h5>
+                            <p>{{ grpadmin.Address }}{{ grpadmin.City }}{{ grpadmin.State }}{{ grpadmin.Country }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Other Members</h5>
+                <div class="table-responsive">
+                    <table id="zero_config" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Occupation</th>
+                                <th>Age</th>
+                                <th>Education</th>
+                                <th>Mobile</th>
+                                <th>E mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in member %}
+                            <tr>
+                                <td>{{ i.memName }}</td>
+                                <td>{{ i.memposition }}</td>
+                                <td>{{ i.memoccupation }}</td>
+                                <td>{{ i.memAge }}</td>
+                                <td>{{ i.memeducation }}</td>
+                                <td>{{ i.memMobile }}</td>
+                                <td>{{ i.memEmail }}</td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+{% endblock %}

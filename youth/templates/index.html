@@ -1,0 +1,375 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+		<br><br><br>
+   <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<img class="one-third order-md-last img-fluid" src="{% static 'images/apj.png' %}" style="width:100%;height:100%" alt="">
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '100%' }">
+		          	<div class="text">
+		          		<span class="subheading">Join Our Camp</span>
+		          		<div class="horizontal">
+				            <h1 class="mb-4 mt-3">About Dr S.N. Subbarao</h1>
+				            <p class="mb-4">Living Spirit of Mahatma Gandhi</p>
+
+				            <p><a  onclick="togglePopup()" class="btn-custom">Nyp Alumni Membership</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<img class="one-third order-md-last img-fluid" src="{% static 'images/ind.png' %}" style="width:100%;height:100%" alt="">
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '100%' }">
+		          	<div class="text">
+		          		<span class="subheading">Join Our Camp</span>
+		          		<div class="horizontal">
+				            <h1 class="mb-4 mt-3">Dr. S. N. Subba Rao</h1>
+				            <p class="mb-4">Living Spirit of Mahatma Gandhi</p>
+
+				            <p><a onclick="togglePopup()" class="btn-custom">Nyp Alumni Membership</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+				  <a href="{% url 'terms_cond' %}"><img  src="{% static 'images/ic.png' %}" width="70" height="80"></a>
+              </div>
+              <div class="media-body">
+                <h3 class="heading"><a href="{% url 'terms_cond' %}">NYP Alumni Membership</a></h3>
+                <p>The National Youth Project
+As in many other countries, thousands of youths came out with dedication and sacrifice to join the struggle for freedom and the motivating force then was to free their country from foreign rule texts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+				<a href="{% url 'volunteer' %}"><img  src="{% static 'images/Volunteer.png' %}" width="70" height="80"></a>
+              </div>
+              <div class="media-body">
+                <h3 class="heading"><a href="{% url 'volunteer' %}">Be Volunteer</a></h3>
+                <p>Youths will have other activities devoted to the process of making a family of youths belonging to all religions, regions, languages and political thinking.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+				<a href="{% url 'job_internship' %}"><img src="{% static 'images/Job.png' %}" width="70" height="80"></a>
+              </div>
+              <div class="media-body">
+                <h3 class="heading"><a href="{% url 'job_internship' %}">Job Internship</a></h3>
+                <p>The motivating force for the youths now to join the movement should be to free their country from shortcomings. Activities that will help build the ‘espirit-de-corps’ among the youths include community work for the benefit of the needy, all religious prayers and learning each other’s language for national integration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+    	<div class="container">
+			<center><h2>Our Books</h2></center><br>
+				<div class="row no-gutters">
+					<div class="col-lg-4">
+						<div class="flip-box">
+							<div class="flip-box-inner">
+						<div class="choose-wrap divider-one img p-5 d-flex align-items-end" style="background-image: url({% static 'images/choose-1.jpg' %});">
+    					<div class="text text-center text-white px-2">
+								<span class="subheading"></span>
+    						<h2></h2>
+    						<p></p>
+    						<p><a href="{% url 'book' %}" class="btn btn-black px-3 py-2">Read More</a></p>
+    					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					<div class="col-lg-8">
+    				<div class="row no-gutters choose-wrap divider-two align-items-stretch">
+    					<div class="col-md-12">
+							<div class="flip-box">
+								<div class="flip-box-inner">
+	    					<div class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style="background-image: url({% static 'images/choose-2.jpg' %});">
+	    						<div class="col-md-7 d-flex align-items-center">
+	    							<div class="text text-white px-5">
+	    								
+			    						<p><a href="{% url 'book' %}" class="btn btn-black px-3 py-2">Read More</a></p>
+			    					</div>
+	    						</div>
+	    					</div>
+						</div>
+						</div>
+						</div>
+    					<div class="col-md-12">
+    						<div class="row no-gutters">
+    							<div class="col-md-6">
+		    						<div class="choose-wrap wrap img align-self-stretch bg-light d-flex align-items-center">
+		    							<div class="text text-center px-5">
+		    								<span class="subheading">Dr S.N. Subbarao</span>
+				    						<h2>Our Recent Books & Magzines will be updated here.</h2>
+											<p></p>
+											
+				    						<p><a href="{% url 'book' %}" class="btn btn-black px-3 py-2">Read More Books</a></p>
+				    					</div>
+		    						</div>
+	    						</div>
+	    						<div class="col-md-6">
+									<div class="flip-box">
+										<div class="flip-box-inner">
+		    						<div class="choose-wrap wrap img align-self-stretch d-flex align-items-center" style="background-image: url({% static 'images/choose-3.jpg' %});">
+		    							<div class="text text-center text-white px-5">
+												<span class="subheading"></span>
+											<h2></h2>
+											<p></p>
+				    						<p><a href="{% url 'book' %}" class="btn btn-black px-3 py-2">Read More</a></p>
+				    					</div>
+		    						</div>
+								</div>
+								</div>
+								</div>
+								
+	    					</div>
+    					</div>
+    				</div>
+    			</div>
+  			</div>
+    	</div>
+    </section>
+
+
+
+	<section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Events & Camps</h2>
+            <p>National Integration Youth Camp Conducted by NYP</p>
+          </div>
+        </div>
+    	</div>
+    	<div class="container">
+    		<div class="row">
+
+				{% for i in camps %}
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+    					<a href="{% url 'post' i.id %}" class="img-prod"><img class="img-fluid" src="{{ i.image.url }}">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    					</div>
+	    					</div>
+    						<h3><a href="{% url 'post' i.id %}">{{ i.title }}</a></h3>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'post' i.id %}" class="add-to-cart text-center py-2 mr-1"><span>View full<i class="ion-ios-add ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+    		</div>
+    	</div>
+    </section>
+
+
+	<div class="elfsight-app-8816c7d7-eb78-4404-8600-da17120eea69"></div>
+
+
+    <section class="ftco-section ftco-deal bg-primary">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<img src="{% static 'images/prod-1.png' %}" class="img-fluid" alt="">
+    			</div>
+    			<div class="col-md-6">
+    				<div class="heading-section heading-section-white">
+						
+    					<span class="subheading">Upcoming Camp</span>
+	            <h2 class="mb-3">Punjab Camp Registration</h2>
+	          </div>
+    				<div id="timer" class="d-flex mb-4">
+						  <div class="time" id="days"></div>
+						  <div class="time pl-4" id="hours"></div>
+						  <div class="time pl-4" id="minutes"></div>
+						  <div class="time pl-4" id="seconds"></div>
+						</div>
+						<div class="text-deal">
+							<p>The vast and multidimensional country India has often been described as “a rich country with poor people!” It has glorious legacy of rich history, minerals, forest and other natural wealth, beautiful rivers and mountains and talented citizens. The country still suffers from some shortcomings that are eating into the very vitals of its glory.
+
+The country’s youths who are the future citizens, are naturally concerned with state of affairs in their country. During their discussions, they have identified some priority problems </p>
+							<p class="price">Fees <span class="price-sale">1000.00</span></p>
+						</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+<section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Press Release</h2>
+            <p>Youth is regarded as a transitional phase of man’s life. In future life whether one will grow up as a burden on society or a responsible citizen, depending upon the environment provided at this stage of life</p>
+          </div>
+        </div>
+    	</div>
+    	<div class="container">
+    		<div class="row">
+				
+				{% for i in pr %}
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+						
+    					<a href="{% url 'press_single' i.id %}" class="img-prod" ><img class="img-fluid" src="{{ i.image.url }}" >
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    					</div>
+	    					</div>
+    						<h3><a href="{% url 'press_single' i.id %}">{{ i.title }}</a></h3>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'press_single' i.id %}" class="add-to-cart text-center py-2 mr-1"><span>View full<i class="ion-ios-add ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+    		</div>
+    	</div>
+    </section>
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row">
+        	<div class="col-lg-5">
+        		<div class="services-flow">
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+							<a href="{% url 'terms_cond' %}" ><img src="{% static 'images/ic.png' %}" width="70" height="80"></a>
+        				</div>
+        				<div class="text">
+							<a href="{% url 'terms_cond' %}" ><h3>NYP Alumni Membership</h3></a>
+As in many other countries, thousands of youths came out with dedication and sacrifice to join the struggle for freedom and the motivating force then was to free their country from foreign rule texts.</p>
+        				</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        					<a href="{% url 'volunteer' %}" ><img src="{% static 'images/Volunteer.png' %}" width="70" height="80"></a>
+
+        				<div class="text">
+							<a href="{% url 'volunteer' %}" ><h3>Be Volunteer</h3></a>
+	        				<p class="mb-0">Youths will have other activities devoted to the process of making a family of youths belonging to all religions, regions, languages and political thinking.</p>
+	        			</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+							<a href="{% url 'job_internship' %}" ><img src="{% static 'images/job.png' %}" width="70" height="80"></a>
+        				</div>
+        				<div class="text">
+							<a href="{% url 'job_internship' %}" ><h3>Job/Internships</h3></a>
+	        				<p class="mb-0">The motivating force for the youths now to join the movement should be to free their country from shortcomings. Activities that will help build the ‘espirit-de-corps’ among the youths include community work for the benefit of the needy, all religious prayers and learning each other’s language for national integration.</p>
+	        			</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        					<img src="{% static 'images/donation.png' %}" width="70" height="80">
+        				<div class="text">
+	        				<h3>Donate Now</h3>
+	        				<p class="mb-0"> A donation to NYP is to help our youth to build a stronger and more honest Mother India</p>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+          <div class="col-lg-7">
+          	<div class="heading-section ftco-animate mb-5">
+	            <h2 class="mb-4">The National Youth Project</h2>
+	            <p>
+As in many other countries, thousands of youths came out with dedication and sacrifice to join the struggle for freedom and the motivating force then was to free their country from foreign rule. The motivating force for the youths now to join the movement should be to free their country from shortcomings. Activities that will help build the ‘espirit-de-corps’ among the youths include community work for the benefit of the needy, all religious prayers and learning each other’s language for national integration. Youths will have other activities devoted to the process of making a family of youths belonging to all religions, regions, languages and political thinking.
+The movement launched under the directorship of Dr. S.N. Subba Rao was named National Youth Project (NYP)
+N.Y.P. organised youth camps and other programmes in many parts/cities of India such as Nagaland , Manipur, Sikkim, Ladakh, Lakshdweep, Andaman, Bhagalpur, Aligarh, Bombay, Godhra, Kanpur, Nakodar and other riot affected places. Padyatras by these youths in the affected areas are found most helpful in bridging the gulf between people.
+The youths could establish that in spite of differences due to religion, caste, language or status they could live together and be friendly to one another, bringing forth living meaning to the spirit of “Unity in Diversity”. After their experience in the NYP camps the youths themselves felt that their life became more meaningful when they participated in nation building activities. NYP has been conducting about 10 camps in a year. They are : National Integration Camps, Communal Harmony Camps Literacy Camps, Relief Camps for victims of riots, earthquake etc. Women’s camps, Camps for Management Course, South East Asia Friendship Camp.</p>
+	          </div>
+			  <div class="carousel-testimony owl-carousel">
+				<div class="item">
+				  <div class="testimony-wrap">
+						<div class="user-img mb-4" style="background-image:  url({% static 'images/subba.jpg' %});">
+							<i class="icon-quote-left"></i>
+						  </span>
+						</div>
+						<div class="text">
+						  <p class="name">Dr. S. N. Subba Rao</p>
+						  <span class="position">Living Spirit of Mahatma Gandhi</span>
+						</div> 
+					  </div>
+					</div>
+				  </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-gallery">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-8 heading-section text-center mb-4 ftco-animate">
+            <h2 class="mb-4">Connect Us On Facebook</h2>
+            <p>The National Youth Project
+As in many other countries, thousands of youths came out with dedication and sacrifice to join the struggle for freedom and the motivating force then was to free their country from foreign rule.</p>
+{% if request.user.is_authenticated %}
+		
+<form action="" method="POST">
+	{% csrf_token %}
+  <div class="row">
+	<div class="col-75">
+	<input type="file" id="lname" name="image" placeholder="Enter video url.."  style="background-color	:#4267B2;">
+	<input type="submit" value="Upload File" name="facebook" class="btn btn-primary py-2 px-3"  style="background-color	:#4267B2;">
+	</div>
+  </div>
+</form>
+{% endif %}
+</div>
+    		</div>
+		</div>
+    	<div class="container-fluid px-0">
+    		<div class="row no-gutters">
+				{% for i in img %}
+				
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{i.image.url}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ i.image.url }});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+							<span class="icon-instagram"></span>
+						</div>
+						</a>
+					</div>
+					{% if request.user.is_authenticated %}
+						<a href=""><button style="background-color:red;">Delete</button></a><br>
+						{% endif %}	
+				{% endfor %}
+				
+        </div>
+    	</div>
+    </section>
+
+
+{% endblock %}

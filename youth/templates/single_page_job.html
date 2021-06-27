@@ -1,0 +1,175 @@
+{% extends 'admin_base.html' %}
+{% load static %}
+{% block body %}
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Job Detail</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo</h5>
+                        <img src="{{ jobsingle.image.url }}" alt="Italian Trulli">
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Full Name</h5>
+                            <p>{{ jobsingle.first_name }} {{ volsingle.last_name }} </p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Gender</h5>
+                            <p>{{ jobsingle.gender }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application</h5>
+                            <p>{{ jobsingle.date }}</p>
+                            
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Application Approved</h5>
+                            <p>{{ jobsingle.activatedate }}</p>
+                            
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Mail</h5>
+                            <p>{{ jobsingle.email }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile No</h5>
+                            <p>{{ jobsingle.Mobile_no }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Aadhar - No</h5>
+                            <p>{{ jobsingle.adhar_no }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Date of Birth</h5>
+                            <p>{{ jobsingle.date_of_birth }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- drop down -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Address - 1</h5>
+                            <p>{{ jobsingle.address1 }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Address - 2</h5>
+                            <p>{{ jobsingle.address2 }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">city </h5>
+                            <p>{{ jobsingle.city }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">State </h5>
+                            <p>{{ jobsingle.state }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">block </h5>
+                            <p>{{ jobsingle.block }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">country </h5>
+                            <p>{{ jobsingle.country }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Area Of Intrest</h5>
+                            <p>{{ jobsingle.area_of_intrest }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Duration</h5>
+                            <p>{{ jobsingle.desired_duration }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Starting Month</h5>
+                            <p>{{ jobsingle.starting_month }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Brief Detail</h5>
+                            <p>{{ jobsingle.brief_detail }}</p>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Resume</h5>
+                        <iframe src="{{ jobsingle.resume.url }}"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
